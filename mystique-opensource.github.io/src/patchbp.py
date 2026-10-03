@@ -376,14 +376,6 @@ def bp_java(cveid: str, patch: dict[str, str], file_path: str, method_name: str,
     results["groundtruth"] = gt_code
     results["target_slice_lines"] = list(target_slice_lines)
     results["time"] = f"{(time.time() - start_time):.2f}"
-
-    fixed_code = llm.llm_fix(patch_code, target_sliced_code_placeholder, language)
-    if fixed_code is not None:
-        utils.write2file(os.path.join(method_dir, f"5.ours@sp{file_suffix}"), fixed_code)
-        final_code = target_method.recover_placeholder(fixed_code, target_slice_lines, config.PLACE_HOLDER)
-        if final_code is not None:
-            utils.write2file(os.path.join(method_dir, f"5.ours{file_suffix}"), final_code)
-            results["ours"] = final_code
     return results
 
 
