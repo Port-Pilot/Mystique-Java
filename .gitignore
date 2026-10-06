@@ -1,6 +1,2 @@
 .env
-cve-java-custom-full.json
-.mystique-java-repos/
-mystique-opensource.github.io/src/cache_java/
-/venv
-/cache_java
+venv/

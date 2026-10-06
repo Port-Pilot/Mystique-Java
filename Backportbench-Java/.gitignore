@@ -1,0 +1,6 @@
+.mystique-backportbench-repos/
+.backportbench-java-commits.json
+.backportbench-java-repos.json
+backportbench-java-full.json
+__pycache__/
+cache_java/
